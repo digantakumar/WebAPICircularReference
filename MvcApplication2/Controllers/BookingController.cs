@@ -18,7 +18,7 @@ namespace MvcApplication2.Controllers
         // GET api/Booking
         public IEnumerable<TblCustomerBooking> GetTblCustomerBookings()
         {
-            //_db.Configuration.ProxyCreationEnabled = false;
+            _db.Configuration.ProxyCreationEnabled = false;
             var res = _db.TblCustomerBookings.AsEnumerable();
             return res;
         }

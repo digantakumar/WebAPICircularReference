@@ -47,9 +47,9 @@ namespace MvcApplication2
 
             //To avoid 500 error of circular reference. NOT WORKING
             //http://stackoverflow.com/questions/10897523/asp-net-web-api-showing-correctly-in-vs-but-giving-http500/11387431#11387431
-            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            //json.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Serialize;
-            //json.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.All;
+            //config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            json.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Serialize;
+            json.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.All;
 
             //Indenting
             //http://www.asp.net/web-api/overview/formats-and-model-binding/json-and-xml-serialization
